@@ -1,0 +1,61 @@
+drop table PAYMENT;
+drop table TRANSACTIONS;
+drop table ACCOUNT;
+drop table CUSTOMER;
+commit;
+create table CUSTOMER(
+ Cust_id number(5) primary key,
+ Password varchar2(10) not null,
+ Name varchar2(30) not null,
+ Gender char(1) check(Gender in('M','F')),
+ Phone number(10) unique,
+ Pan varchar2(10) unique ,
+ Age number(2));
+create table ACCOUNT(
+ Cust_id number(5) references CUSTOMER(cust_id),
+ Account_number number(15) primary key,
+ Amount number(15) not null , 
+ Date_of_creation date default sysdate,
+ Account_type varchar2(10) CHECK(Account_type in ('Savings','FD')) );
+
+create table PAYMENT(
+ Payment_id number(5) primary key,
+ Account_number number(15) references ACCOUNT(Account_number),
+ Payment_amount number(10),
+ Description_of_payment varchar2(15));
+
+create table TRANSACTIONS(
+ Transaction_id number(5) primary key,
+ From_account number(15) references ACCOUNT(Account_number),
+ To_account number(15) references ACCOUNT(Account_number),
+ Date_of_transaction date DEFAULT SYSDATE,
+ Transfer_amount number);
+commit;
+ 
+insert into customer values(100,1000,'David','M',789456123,'4564D7891',30);
+insert into customer values(101,1001,'kareena','F',7846465465,'3564K7891',30);
+insert into customer values(102,1002,'Dharmendar','M',789445123,'2564D7891',30);
+insert into customer values(103,1003,'katrina','F',789412123,'1564k7891',30);
+insert into customer values(104,1004,'shahrukh','M',789457823,'8564s7891',30);
+insert into customer values(105,1005,'salman','M',789445126,'9564S7891',30);
+
+insert into account(Cust_id,Account_number,Amount,Account_type)
+     values (100,    500,           15000,'Savings');
+insert into account(Cust_id,Account_number,Amount,Account_type)
+     values (101,    501,           16000,'Savings');
+insert into account(Cust_id,Account_number,Amount,Account_type)
+     values (102,    502,           17000,'Savings');
+insert into account(Cust_id,Account_number,Amount,Account_type)
+     values (103,    503,           20000,'Savings');
+insert into account(Cust_id,Account_number,Amount,Account_type)
+     values (104,    504,           114000,'Savings');
+insert into account(Cust_id,Account_number,Amount,Account_type)
+     values (105,    505,           30000,'Savings');
+
+insert into transactions values(1,500,501,sysdate,6000);
+insert into transactions values(2,501,502,sysdate,1000);
+insert into transactions values(3,502,503,sysdate,800);
+insert into transactions values(4,502,504,sysdate,100);
+insert into transactions values(5,501,504,sysdate,5000);
+
+commit;
