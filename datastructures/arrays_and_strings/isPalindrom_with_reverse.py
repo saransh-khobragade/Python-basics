@@ -6,4 +6,4 @@ def isPalindrom_with_reverse(str):
     print("its a palindrome")
   else:
     print("its not a palindome")
-isPalindrom("abbac")
+isPalindrom_with_reverse("abbac")
