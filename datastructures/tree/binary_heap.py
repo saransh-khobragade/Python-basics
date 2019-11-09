@@ -69,3 +69,6 @@ print(a.insert(4))
 # Arr[(i-1)/2]	Returns the parent node
 # Arr[(2*i)+1]	Returns the left child node
 # Arr[(2*i)+2]	Returns the right child node
+
+# insert,delete,extract_min = o(log n)
+# extract min = o(1)
