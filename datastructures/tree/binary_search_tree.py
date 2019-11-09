@@ -79,10 +79,12 @@ print("Inorder traversal of the modified tree")
 inorder(root) 
 
 
-""" Let us create following BST 
+""" Let us create following BST
               50 
            /     \ 
           30      70 
          /  \    /  \ 
-       20   40  60   80 """
+       20   40  60   80
   
+Complexity
+insert,search,delete o(height)"""
