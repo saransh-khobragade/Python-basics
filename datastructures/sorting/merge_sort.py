@@ -1,33 +1,34 @@
-# Python program for implementation of MergeSort 
-def mergeSort(arr): 
-    if len(arr) >1: 
-        mid = len(arr)//2 #Finding the mid of the array 
-        L = arr[:mid] # Dividing the array elements  
-        R = arr[mid:] # into 2 halves 
-  
-        mergeSort(L) # Sorting the first half 
-        mergeSort(R) # Sorting the second half 
-  
-        i = j = k = 0
-          
-        # Copy data to temp arrays L[] and R[] 
-        while i < len(L) and j < len(R): 
-            if L[i] < R[j]: 
-                arr[k] = L[i] 
+def merge_sort(arr):
+    if len(arr)==1:
+        return arr
+
+    mid = len(arr)//2    
+
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
+
+    result=[]
+    i=j=k=0
+
+    while i<len(left) or j<len(right):
+        if i<len(left) and j<len(right):
+            if left[i]<right[j]:
+                result.append(left[i])
                 i+=1
-            else: 
-                arr[k] = R[j] 
+
+            elif left[i]>right[j]:
+                result.append(right[j])
                 j+=1
-            k+=1
-          
-        # Checking if any element was left 
-        while i < len(L): 
-            arr[k] = L[i] 
+
+        elif i<len(left):
+            result.append(left[i])
             i+=1
-            k+=1
-          
-        while j < len(R): 
-            arr[k] = R[j] 
+
+        elif j<len(right):
+            result.append(right[j])
             j+=1
-            k+=1
-mergeSort([12,11,13,5])
+
+    return result
+
+print(merge_sort([2,13,5,9,7,10]))
+#len 6-1 5//2 = 2
