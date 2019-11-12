@@ -16,8 +16,6 @@ def quicksort(arr,start,end):
         quicksort(arr,p+1,end) # pivot right ele
 
 
-
-
 arr=[14,8,12,6,4,9,13]
 quicksort(arr,0,len(arr)-1)
 print(arr)
