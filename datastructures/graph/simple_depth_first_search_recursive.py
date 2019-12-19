@@ -4,6 +4,7 @@ graph = {'A': set(['B', 'C']),
          'D': set(['B']),
          'E': set(['B', 'F']),
          'F': set(['C', 'E'])}
+         
 def dfs(graph, start, visited=None):
     if visited is None:
         visited = set()
