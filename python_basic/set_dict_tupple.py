@@ -17,3 +17,10 @@ dictionary = {
     'F': 2323
 }
 print(dictionary)
+
+#getting index of some key
+index_of_key = list(dictionary.keys()).index(key)
+
+#add item or update to dictionary
+dictionary['item3'] = 3
+dictionary.update({'item3': 3})

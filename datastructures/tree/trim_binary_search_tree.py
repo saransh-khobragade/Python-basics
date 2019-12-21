@@ -39,7 +39,9 @@ root = insert(root, 70)
 root = insert(root, 60) 
 root = insert(root, 80) 
   
-trim_binary_search_tree(root,55,75)
+inorder(root)
+print('triming')
+trim_binary_search_tree(root,40,70)
 inorder(root)
 
 """           50 

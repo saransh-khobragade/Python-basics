@@ -27,4 +27,3 @@ def dfs_paths(graph, start, goal):
                 stack.append((nxt, path + [nxt]))
 
 print(list(dfs_paths(graph, 'A', 'F')))
-

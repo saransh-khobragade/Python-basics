@@ -18,7 +18,7 @@ def bfs(graph, start):
     return visited
 
 
-#print(bfs(graph, 'A'))
+print(bfs(graph, 'A'))
 
 def bfs_paths(graph, start, goal):
     queue = [(start, [start])]
@@ -31,7 +31,7 @@ def bfs_paths(graph, start, goal):
                 queue.append((i, path + [i]))
 
 
-print(list(bfs_paths(graph, 'A', 'F')))
+#print(list(bfs_paths(graph, 'A', 'F')))
 
 
 def shortest_path(graph, start, goal):

@@ -20,7 +20,7 @@ def bfs(graph,start):
             visited.add(vertex)
             queque.extend(graph[vertex] - set(visited))
     return visited
-print(bfs(graph,"A"))
+#print(bfs(graph,"A"))
 
 #DFS
 def dfs(graph,start):
