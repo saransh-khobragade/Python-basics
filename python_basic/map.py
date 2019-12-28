@@ -6,3 +6,5 @@ numbers = [ int(x) for x in d ]
 
 p,c=map(int,input().split())
 
+l = list(map(int,input().split()))
+
