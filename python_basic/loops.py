@@ -14,3 +14,8 @@ for x in range(6):
 
 # for x in range(2, 20,2):
 #     print("fourth "+str(x))
+
+#dictionry
+
+for x,y in d.items():
+    print(x)
