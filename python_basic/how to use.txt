@@ -1,2 +1,0 @@
-from PythonFunctions import *
-print(factorial(5))
