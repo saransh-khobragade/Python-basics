@@ -1,18 +1,22 @@
 def isAnagram(str1,str2):
     temp={}
     flag=True
+    
+    # Count frequency of all elements
     for x in str1:
         if x in temp:
             temp[x]+=1
         else:
             temp[x]=1
     
+    # decreament frequency of all elements
     for x in str2:
         if x in temp:
             temp[x]-=1
         else:
             temp[x]=1
     
+    # if there is any count its not anagram
     for x,y in temp.items():
         if y>0:
             flag=False
