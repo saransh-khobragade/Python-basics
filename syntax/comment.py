@@ -1,2 +1,6 @@
-#This is a comment
+#This is a single line comment
 print("Hello, World!")
+
+"""
+Multiline comment
+"""

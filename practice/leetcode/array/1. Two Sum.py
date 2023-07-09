@@ -11,3 +11,4 @@ nums = [3,2,4]
 target = 6
 s = Solution()
 print(s.twoSum(nums,target))
+
