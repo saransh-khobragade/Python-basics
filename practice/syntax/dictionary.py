@@ -1,3 +1,25 @@
+#blank dicktionary
+dic={}
+dic["a"]=5
+dic["b"]=10
+
+#how to loop over dictionary
+for x, y in dic.items():
+  print(x, y)
+
+for x in dic.keys():
+  print(x)
+
+for y in dic.values():
+  print(y)
+
+#how to check key exists in dictionary
+if 'x' in dic:
+    dic['x']+=1
+else:
+    dic['x']=1
+
+
 # Set unique but no unordered
 set_itmes = {'A': set(['B', 'C']),
              'B': set(['A', 'D', 'E']),
