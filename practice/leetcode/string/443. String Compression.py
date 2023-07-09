@@ -17,7 +17,7 @@ class Solution:
                 d.append([current,count])
                 current = chars[i]
                 count = 1
-        d.append([current,count])
+        d.append([current,count]) #making array to save character and its count to save its ref to make change in original array
 
         i=0
         for x,y in d:
