@@ -1,12 +1,3 @@
-dic={}
-dic["a"]=5
-dic["b"]=10
+arr=[1,2,3]
 
-for x, y in dic.items():
-  print(x, y)
-
-for x in dic.keys():
-  print(x)
-
-for y in dic.values():
-  print(y)
+print(arr[1:])
