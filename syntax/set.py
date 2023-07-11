@@ -18,3 +18,6 @@ print(s)            # { 1, 2, 3}
 
 s = set('ABC')      # create set from string
 print(s)            # {'C', 'B', 'A'}
+
+#converting list to set
+s = set(listitem)

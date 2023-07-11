@@ -23,3 +23,9 @@ print(str[2:5]) #llo [including:excluding]
 #sorted()----------------------------------------------------
 print(sorted("abc")) #['a', 'b', 'c']
 
+#converting list to integers to single string
+''.join(list(map(str,arr)))
+
+#getting a string from list
+w = "".join(input().split())
+
