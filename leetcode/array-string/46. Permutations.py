@@ -3,19 +3,15 @@
 from typing import List
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
-        sol=[]
-
-        def backtrack(comb,start):
-            if start == len(nums):
-                sol.append(comb.copy())
-                return comb[:-1]
-            else:
-                for i in range(start,len(nums)):
-                    comb.append(nums[i])
-                    comb = backtrack(comb,i+1)
-                return comb
-        backtrack([],0)
-        return sol
-
+        result=[]
+        if len(nums) == 1:
+            return [nums]
+        else:
+            for i in range(len(nums)):
+               for x in self.permute(nums[:i]+nums[i+1:]):
+                   start = [nums[i]]
+                   start.extend(x)
+                   result.append(start)
+        return result
 s=Solution()
-print(s.permute([1,2,3]))
+print(s.permute([1,1,2]))
