@@ -5,8 +5,7 @@ def permutation(arr,pos,size):
     else:
         for i in range(pos,size):
             arr[i],arr[pos] = arr[pos],arr[i]
-            output = permutation(arr,pos+1,size)
-            result.extend(output)
+            result.extend(permutation(arr,pos+1,size))
             arr[i],arr[pos] = arr[pos],arr[i]
     return result
 
