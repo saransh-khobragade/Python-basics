@@ -7,9 +7,12 @@ class Solution:
         l = len(nums)
         products = [1]*l
 
+        left=1
         for i in range(1,l):
-            products[i] = products[i-1]*nums[i-1]
+            products[i]=nums[i-1] * left
+            left =products[i]
         
+        print(products)
         right = 1
         for i in range(l-1,-1,-1):
             products[i] *= right
@@ -19,5 +22,5 @@ class Solution:
         
         
 s = Solution()
-print(s.productExceptSelf([1,2,3,4]))
+print(s.productExceptSelf([2,3,5,0]))
             
