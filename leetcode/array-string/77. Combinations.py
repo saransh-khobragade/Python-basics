@@ -5,20 +5,20 @@
 from typing import List
 
 class Solution:
-    def combine(self,n,k):
+    def combine(self,L,N):
         sol=[]
-        def backtrack(level,comb,pos):
+        def backtrack(comb,level,pos,N):
             if level == 0:
                 sol.append(comb.copy())
                 return
             else:
-                for i in range(pos,n+1):
+                for i in range(pos,N+1):
                     comb.append(i)
-                    backtrack(level-1,comb,i+1)
+                    backtrack(comb,level-1,i+1,N)
                     comb.pop()
-        backtrack(k,[],1)
+        backtrack([],L,1,N)
         return sol
 s = Solution()
-n=3
-k=2
-print(s.combine(n,k))
+N=3
+L=2
+print(s.combine(L,N))
