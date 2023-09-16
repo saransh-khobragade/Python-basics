@@ -36,6 +36,10 @@ print(arr) #['potatoe', 'pineapple', 'orange', 'kiwi', 'cherry', 'carry', 'berry
 arr.reverse()
 print(arr) #['berry', 'carry', 'cherry', 'kiwi', 'orange', 'pineapple', 'potatoe']
 
+#Dynamic Array
+arr = [1]*5
+print(arr)
+
 
 
 

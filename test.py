@@ -1,3 +1,4 @@
-arr=['1','2','3']
+d = {}
+d[("a","b","c")]=1
+print(d)
 
-print(''.join(arr))
