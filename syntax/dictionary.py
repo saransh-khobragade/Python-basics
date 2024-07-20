@@ -59,5 +59,10 @@ print(sorted(dictionary.items(), key=lambda x:x[1] ,reverse=False))
 #sorting dictionary by its keys and converting to list to tuple
 print(sorted(dictionary.items(), key=lambda x:x[0] ,reverse=False))
 
+#complex key in dictionary using tupple
+d = {}
+d[("a","b","c")]=1
+print(d)
+
 
 
